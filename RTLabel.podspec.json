@@ -11,7 +11,7 @@ authors: {
 Muh Hon Cheng: "honcheng@gmail.com"
 },
 source: {
-git: "https://github.com/thelearningclinic/RTLabel.git",
+git: "https://github.com/thelearningclinic/RTLabel.git"
 },
 platforms: {
 ios: null
