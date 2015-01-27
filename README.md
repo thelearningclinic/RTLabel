@@ -1,3 +1,12 @@
+TLC Changes
+===========
+* 47555 fix for RTLabel crash
+* 45538 remove warnings
+* 44330 RTLabel memory leak fixes - needs reviewing
+* 39424 fix warnings
+* 37007 Merge of 2.3 with 2.4
+
+
 RTLabel 
 =======
 
