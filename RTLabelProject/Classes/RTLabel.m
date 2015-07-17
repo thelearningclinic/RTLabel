@@ -309,9 +309,8 @@
 	//CTFrameRef 
 	self.frameRef = CTFramesetterCreateFrame(framesetter,CFRangeMake(0, 0), path, NULL);
 	
-	CFRange range;
 	CGSize constraint = CGSizeMake(self.frame.size.width, CGFLOAT_MAX);
-	self.optimumSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0, [self.plainText length]), nil, constraint, &range);
+	self.optimumSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0, [self.plainText length]), nil, constraint, nil);
 	
 	
 	if (self.currentSelectedButtonComponentIndex==-1)
@@ -487,7 +486,7 @@
 {
 	CTFontRef actualFontSize = CFAttributedStringGetAttribute(text, position, kCTFontAttributeName, NULL);
 	
-	UIFont *font = [UIFont boldSystemFontOfSize:CTFontGetSize(actualFontSize)];
+	UIFont *font = [UIFont italicSystemFontOfSize:CTFontGetSize(actualFontSize)];
 	CTFontRef italicFont = CTFontCreateWithName ((__bridge CFStringRef)[font fontName], [font pointSize], NULL); 
 	CFAttributedStringSetAttribute(text, CFRangeMake(position, length), kCTFontAttributeName, italicFont);
 	
